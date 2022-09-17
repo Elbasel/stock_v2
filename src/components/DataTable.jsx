@@ -53,8 +53,8 @@ export const DataTable = ({
           <tr>
             <th className="thead">Title</th>
             <th className="thead">Size</th>
-            <th className="thead">Material</th>
             <th className="thead">Color</th>
+            <th className="thead">Material</th>
             <th className="thead">Amount</th>
             <th className="thead">Delete</th>
           </tr>

@@ -1,7 +1,14 @@
 const checkItem = (item, searchParams) => {
   for (const param of Object.keys(searchParams)) {
     if (searchParams[param] === "") continue;
-    if (!item.get(param).includes(searchParams[param])) return false;
+    if (
+      !item
+        .get(param)
+        .trim()
+        .toLowerCase()
+        .includes(searchParams[param].trim().toLowerCase())
+    )
+      return false;
   }
   return true;
 };
