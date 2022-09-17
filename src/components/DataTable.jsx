@@ -18,7 +18,7 @@ export const DataTable = ({
       <td>{item.get("size")}</td>
       <td>{item.get("color")}</td>
       <td>{item.get("material")}</td>
-      <td className="flex items-center gap-2 justify-center ">
+      <td className="flex items-center gap-2  h-[100px] justify-center ">
         <ActionButton
           onClick={() => onItemDecrease(item)}
           loading={buttonDisabled}
