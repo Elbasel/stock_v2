@@ -107,6 +107,7 @@ function App() {
     const newItemList = new Parse.Object("listItem");
     newItemList.set("title", values.title);
     newItemList.set("color", values.color);
+    newItemList.set("material", values.material);
     newItemList.set("size", values.size);
     newItemList.set("amount", +values.amount);
 
@@ -132,7 +133,7 @@ function App() {
   return (
     <MantineProvider emotionCache={myCache}>
       <div className="h-screen w-screen flex flex-col items-center">
-        <h1 className="font-mono text-3xl mt-4">Stock</h1>
+        <h1 className="font-mono text-3xl mt-4">Creation Stock</h1>
         <AddDialog onSubmit={handleAddItem} />
         <Filter
           onParamsChange={(name, value) =>

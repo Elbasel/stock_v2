@@ -17,6 +17,7 @@ export const DataTable = ({
       <td>{item.get("title")}</td>
       <td>{item.get("size")}</td>
       <td>{item.get("color")}</td>
+      <td>{item.get("material")}</td>
       <td className="flex items-center gap-2 justify-center ">
         <ActionButton
           onClick={() => onItemDecrease(item)}
@@ -52,6 +53,7 @@ export const DataTable = ({
           <tr>
             <th className="thead">Title</th>
             <th className="thead">Size</th>
+            <th className="thead">Material</th>
             <th className="thead">Color</th>
             <th className="thead">Amount</th>
             <th className="thead">Delete</th>
@@ -62,7 +64,7 @@ export const DataTable = ({
         ) : (
           <tbody>
             <tr>
-              <td className="text-center" colSpan={5}>
+              <td className="text-center" colSpan={6}>
                 No Results
               </td>
             </tr>

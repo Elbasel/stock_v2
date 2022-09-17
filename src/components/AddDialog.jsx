@@ -28,7 +28,7 @@ export const AddDialog = ({ onSubmit }) => {
         </ActionButton>
       </div>
       {!dialogHidden && (
-        <div className="absolute w-full h-full backdrop-blur-lg flex flex-col items-center  z-10">
+        <div className="scale-in absolute w-full h-full backdrop-blur-lg flex flex-col items-center  z-10">
           <div className="absolute top-2 right-2">
             <ActionButton size="xl" onClick={() => setDialogHidden(true)}>
               <AiOutlineClose size={24} />
@@ -36,7 +36,7 @@ export const AddDialog = ({ onSubmit }) => {
           </div>
           <h1 className="mt-10 text-2xl font-mono mb-4">Add Item</h1>
           <form className="flex flex-col " onSubmit={(e) => handleSubmit(e)}>
-            {["title", "size", "color", "amount"].map((name) => (
+            {["title", "size", "material", "color", "amount"].map((name) => (
               <FormTextInput
                 key={name}
                 name={name}
