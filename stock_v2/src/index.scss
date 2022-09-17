@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+th {
+    width: 30px;
+    text-align: center !important;
+}
+
+td {
+    text-align: center !important;
+    
+}
+
+button:disabled {
+    background-color: rgb(20, 71, 119) !important;
+}
+
+.scale-in {
+    animation: scale-in 100ms ease-in;
+
+}
+
+@keyframes scale-in {
+    0% {
+        scale: 0.9;
+        opacity: 0;
+    }
+
+}

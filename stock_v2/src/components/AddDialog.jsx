@@ -22,7 +22,7 @@ export const AddDialog = ({ onSubmit }) => {
   };
   return (
     <>
-      <div className="top-2 right-2 z-10 absolute">
+      <div className="absolute top-2 right-2 ">
         <ActionButton onClick={() => setDialogHidden(false)} size="xl">
           <AiOutlinePlus size={20} />
         </ActionButton>

@@ -25,7 +25,7 @@ export const DataTable = ({
         >
           <AiOutlineMinus size={10} />
         </ActionButton>
-        <p className="w-8"> {item.get("amount")}</p>
+        <p className="w-10"> {item.get("amount")}</p>
         <ActionButton
           onClick={() => onItemIncrease(item)}
           loading={buttonDisabled}
@@ -47,8 +47,8 @@ export const DataTable = ({
   ));
 
   return (
-    <div className="w-full">
-      <Table striped highlightOnHover horizontalSpacing="xs">
+    <div className="w-full p-6">
+      <Table striped highlightOnHover>
         <thead>
           <tr>
             <th className="thead">Title</th>

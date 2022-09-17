@@ -133,9 +133,7 @@ function App() {
   return (
     <MantineProvider emotionCache={myCache}>
       <div className="h-screen w-screen flex flex-col items-center">
-        <h1 className="font-mono text-3xl pt-4 text-left w-full pl-2 shadow-lg pb-4 bg-white z-10">
-          Creation Stock
-        </h1>
+        <h1 className="font-mono text-3xl mt-4">Creation Stock</h1>
         <AddDialog onSubmit={handleAddItem} />
         <Filter
           onParamsChange={(name, value) =>
