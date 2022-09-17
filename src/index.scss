@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+th {
+    width: 30px;
+    text-align: center !important;
+}
+
+td {
+    text-align: center !important;
+    
+}
+
+button:disabled {
+    background-color: rgb(20, 71, 119) !important;
+}
+
