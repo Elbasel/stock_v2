@@ -29,7 +29,10 @@ function App() {
 
   const [items, setItems] = useState([]);
 
-  const [buttonDisabled, setButtonDisabled] = useState(false);
+  const [buttonDisabled, setButtonDisabled] = useState({
+    disabled: false,
+    buttonId: null,
+  });
 
   const startLiveQuery = () => {
     var client = new Parse.LiveQueryClient({
@@ -88,7 +91,7 @@ function App() {
   const editItemAmountOnServer = async (id, newAmount) => {
     const listItem = Parse.Object.extend("listItem");
     const query = new Parse.Query(listItem);
-    setButtonDisabled(true);
+    setButtonDisabled({ disabled: true, buttonId: id });
     try {
       const object = await query.get(id);
       object.set("amount", newAmount);
@@ -100,7 +103,7 @@ function App() {
     } catch (error) {
       console.error("Error while retrieving object item", error);
     }
-    setButtonDisabled(false);
+    setButtonDisabled({ disabled: false, buttonId: id });
   };
 
   const handleAddItem = async (values) => {
@@ -119,7 +122,7 @@ function App() {
   };
 
   const handleDeleteItem = async (item) => {
-    setButtonDisabled(true);
+    setButtonDisabled({ disabled: true, buttonId: item.id });
     const query = new Parse.Query("listItem");
     try {
       const object = await query.get(item.id);
@@ -127,7 +130,7 @@ function App() {
     } catch (error) {
       console.log(error);
     }
-    setButtonDisabled(false);
+    setButtonDisabled({ disabled: true, buttonId: item.id });
   };
 
   return (

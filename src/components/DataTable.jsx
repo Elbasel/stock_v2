@@ -21,22 +21,28 @@ export const DataTable = ({
       <td className="flex items-center gap-2  h-[100px] justify-center ">
         <ActionButton
           onClick={() => onItemDecrease(item)}
-          loading={buttonDisabled}
+          loading={
+            buttonDisabled.buttonId === item.id && buttonDisabled.disabled
+          }
         >
           <AiOutlineMinus size={10} />
         </ActionButton>
         <p className="w-8"> {item.get("amount")}</p>
         <ActionButton
           onClick={() => onItemIncrease(item)}
-          loading={buttonDisabled}
+          loading={
+            buttonDisabled.buttonId === item.id && buttonDisabled.disabled
+          }
         >
-          <AiOutlinePlus size={10} />{" "}
+          <AiOutlinePlus size={10} />
         </ActionButton>
       </td>
       <td>
         <ActionButton
           onClick={() => onItemDelete(item)}
-          loading={buttonDisabled}
+          loading={
+            buttonDisabled.buttonId === item.id && buttonDisabled.disabled
+          }
           color="red"
           className="m-auto"
         >
